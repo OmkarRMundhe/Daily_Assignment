@@ -1,6 +1,10 @@
 package com.example.demo.Jenkins_project;
 
 
+//this is calculator app
+//Comment added to check the test in the jenkins
+
+
 public class Calculator {
 
     public int add(int a, int b) {
