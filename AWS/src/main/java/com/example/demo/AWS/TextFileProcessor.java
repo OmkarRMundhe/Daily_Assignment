@@ -54,14 +54,14 @@ public class TextFileProcessor implements RequestHandler<S3Event, String> {
 			String preview = content.length() > 100 ? content.substring(0, 100) : content;
 
 			Map<String, AttributeValue> item = new HashMap<>();
-			item.put("filename", AttributeValue.builder().s(key).build());
+			item.put("file", AttributeValue.builder().s(key).build());
 			item.put("lineCount", AttributeValue.builder().n(String.valueOf(lineCount)).build());
 			item.put("wordCount", AttributeValue.builder().n(String.valueOf(wordCount)).build());
 			item.put("charCount", AttributeValue.builder().n(String.valueOf(charCount)).build());
 			item.put("preview", AttributeValue.builder().s(preview).build());
 			item.put("processedDate", AttributeValue.builder().s(Instant.now().toString()).build());
 
-			PutItemRequest request = PutItemRequest.builder().tableName("file-processing-results-omkar").item(item).build();
+			PutItemRequest request = PutItemRequest.builder().tableName("file-processing").item(item).build();
 
 			dynamoDB.putItem(request);
 			context.getLogger().log("Successfully saved result for file: " + key);
