@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encora Innovations | Product Catalogue</title>
+  <style>
+    /* 🎨 Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* 🌐 Navbar */
+    header {
+      background: linear-gradient(135deg, #3a0ca3, #7209b7);
+      color: white;
+      padding: 18px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 1.6em;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      font-weight: 500;
+      font-size: 1em;
+      color: #f3f3f3;
+      transition: color 0.3s ease, transform 0.2s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffe066;
+      transform: translateY(-2px);
+    }
+
+    /* 🏷️ Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #9face6, #74ebd5);
+      text-align: center;
+      padding: 90px 20px;
+      color: #fff;
+    }
+
+    .hero h1 {
+      font-size: 2.6em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.1em;
+      color: #f0f0f0;
+    }
+
+    /* 🧩 Product Catalogue Grid */
+    .catalogue {
+      padding: 80px 100px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .catalogue h2 {
+      font-size: 2em;
+      color: #3a0ca3;
+      margin-bottom: 40px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 20px;
+      text-align: left;
+    }
+
+    .product-info h3 {
+      color: #3a0ca3;
+      font-size: 1.2em;
+      margin-bottom: 8px;
+    }
+
+    .product-info p {
+      color: #555;
+      font-size: 0.95em;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-weight: 600;
+      color: #7209b7;
+      font-size: 1em;
+    }
+
+    .buy-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 20px;
+      background: #3a0ca3;
+      color: white;
+      border-radius: 30px;
+      font-size: 0.9em;
+      transition: background 0.3s ease;
+    }
+
+    .buy-btn:hover {
+      background: #560bad;
+    }
+
+    /* 📞 Footer */
+    footer {
+      background: linear-gradient(135deg, #560bad, #b5179e);
+      color: white;
+      text-align: center;
+      padding: 30px;
+      font-size: 0.95em;
+      letter-spacing: 0.5px;
+      font-weight: 400;
+      margin-top: 80px;
+    }
+
+    footer a {
+      color: #ffe066;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    /* 📱 Responsive */
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .catalogue {
+        padding: 50px 20px;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🌐 Navbar -->
+  <header>
+    <div class="logo">Encora Innovations</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Catalogue</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 🏷️ Hero Section -->
+  <section class="hero">
+    <h1>Explore Our Product Catalogue</h1>
+    <p>Discover innovative solutions designed to elevate your business.</p>
+  </section>
+
+  <!-- 🧩 Product Catalogue -->
+  <section class="catalogue">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/906/906349.png" alt="Smart IoT Sensor">
+        <div class="product-info">
+          <h3>Smart IoT Sensor</h3>
+          <p>High-precision environmental monitoring with real-time cloud updates.</p>
+          <p class="price">$120</p>
+          <a href="#" class="buy-btn">View Details</a>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2132/2132648.png" alt="AI Controller">
+        <div class="product-info">
+          <h3>AI Controller</h3>
+          <p>AI-powered automation hub to streamline industrial processes.</p>
+          <p class="price">$250</p>
+          <a href="#" class="buy-btn">View Details</a>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2103/2103613.png" alt="Cloud Data Logger">
+        <div class="product-info">
+          <h3>Cloud Data Logger</h3>
+          <p>Securely store and visualize your sensor data with advanced analytics.</p>
+          <p class="price">$180</p>
+          <a href="#" class="buy-btn">View Details</a>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2400/2400487.png" alt="Smart Irrigation Kit">
+        <div class="product-info">
+          <h3>Smart Irrigation Kit</h3>
+          <p>Automated irrigation system powered by AI and IoT for sustainable farming.</p>
+          <p class="price">$300</p>
+          <a href="#" class="buy-btn">View Details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📞 Footer -->
+  <footer>
+    &copy; 2025 Encora Innovations | All Rights Reserved <br>
+    Contact us at <a href="mailto:support@encorainnovations.com">support@encorainnovations.com</a>
+  </footer>
+
+</body>
+</html>

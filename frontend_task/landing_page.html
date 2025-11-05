@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encora Innovations - Empowering Innovation</title>
+  <style>
+    /* 🎨 Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      background-color: #f8f9fa;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* 🌐 Navbar */
+    header {
+      background: linear-gradient(135deg, #3a0ca3, #7209b7);
+      color: white;
+      padding: 18px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 1.6em;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      font-weight: 500;
+      font-size: 1em;
+      color: #f3f3f3;
+      transition: color 0.3s ease, transform 0.2s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffe066;
+      transform: translateY(-2px);
+    }
+
+    /* 🚀 Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #9face6, #74ebd5);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 90px 100px;
+      color: #fff;
+    }
+
+    .hero-text {
+      max-width: 550px;
+      animation: fadeSlideUp 1.2s ease-out;
+    }
+
+    .hero-text h1 {
+      font-size: 2.8em;
+      margin-bottom: 15px;
+      line-height: 1.2;
+    }
+
+    .hero-text p {
+      font-size: 1.1em;
+      margin-bottom: 25px;
+      color: #f2f2f2;
+    }
+
+    .hero-text button {
+      padding: 12px 30px;
+      font-size: 1em;
+      border: none;
+      border-radius: 30px;
+      background-color: #fff;
+      color: #3a0ca3;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .hero-text button:hover {
+      background-color: #3a0ca3;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .hero img {
+      width: 420px;
+      border-radius: 20px;
+      animation: fadeSlideUp 1.2s ease-out;
+    }
+
+    /* 💡 About Section */
+    .about {
+      padding: 80px 100px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .about h2 {
+      color: #3a0ca3;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.05em;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* 🧰 Services Section */
+    .services {
+      background-color: #f4f6fb;
+      padding: 80px 100px;
+      text-align: center;
+    }
+
+    .services h2 {
+      font-size: 2em;
+      margin-bottom: 40px;
+      color: #3a0ca3;
+    }
+
+    .service-cards {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      width: 280px;
+      padding: 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 1.2em;
+      color: #3a0ca3;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95em;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    /* 📞 Footer Section */
+    footer {
+      background: linear-gradient(135deg, #560bad, #b5179e);
+      color: white;
+      text-align: center;
+      padding: 30px;
+      font-size: 0.95em;
+      letter-spacing: 0.5px;
+      font-weight: 400;
+    }
+
+    footer a {
+      color: #ffe066;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    /* ✨ Animation */
+    @keyframes fadeSlideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* 📱 Responsive */
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 20px;
+      }
+
+      .hero img {
+        width: 80%;
+        margin-top: 30px;
+      }
+
+      .about, .services {
+        padding: 50px 20px;
+      }
+
+      .service-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🌐 Navbar -->
+  <header>
+    <div class="logo">Encora Innvoations</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 🚀 Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>Innovating the Future with Smart Tech</h1>
+      <p>At Encora, we design digital solutions that empower businesses to grow faster and smarter using cutting-edge technology.</p>
+      <button>Get Started</button>
+    </div>
+    <img src="https://cdn-icons-png.flaticon.com/512/4149/4149670.png" alt="Tech Innovation" />
+  </section>
+
+  <!-- 💡 About Section -->
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>
+      Encora is a next-generation technology company that delivers
+      innovative digital transformation services across industries. We believe
+      in combining creativity with technology to build solutions that inspire,
+      empower, and deliver impact.
+    </p>
+  </section>
+
+  <!-- 🧰 Services Section -->
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2103/2103658.png" alt="Web Dev">
+        <h3>Web Development</h3>
+        <p>Custom websites built for performance, scalability, and style using the latest technologies.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3940/3940056.png" alt="AI Solutions">
+        <h3>AI Solutions</h3>
+        <p>Empowering organizations with smart automation, predictive analytics, and intelligent insights.</p>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2706/2706963.png" alt="Cloud Services">
+        <h3>Cloud Integration</h3>
+        <p>Seamless cloud adoption to enhance scalability, reduce costs, and improve data security.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📞 Footer -->
+  <footer id="contact">
+    &copy; 2025 Encora Innvoations | All Rights Reserved <br>
+    Contact us at <a href="mailto:info@encora.com">info@encora.com</a>
+  </footer>
+
+</body>
+</html>

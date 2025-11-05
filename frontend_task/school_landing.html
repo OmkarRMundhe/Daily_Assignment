@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bright Horizon Public School</title>
+  <style>
+    /* 🎨 Base Setup */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      background-color: #f8f9fc;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* 🧭 Navbar */
+    header {
+      background-color: #004aad;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 60px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-size: 1.6em;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffdd57;
+    }
+
+    /* 🌤️ Hero Section */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 80px 100px;
+      background: linear-gradient(135deg, #a2d2ff, #cdb4db);
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.8em;
+      color: #004aad;
+      margin-bottom: 15px;
+    }
+
+    .hero-text p {
+      font-size: 1.1em;
+      color: #333;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .hero-text button {
+      padding: 12px 25px;
+      background-color: #004aad;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .hero-text button:hover {
+      background-color: #002b6d;
+    }
+
+    .hero img {
+      width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    /* 📘 About Section */
+    .about {
+      padding: 80px 100px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .about h2 {
+      color: #004aad;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: 0 auto;
+      color: #555;
+      line-height: 1.7;
+      font-size: 1.05em;
+    }
+
+    /* 📚 Academics Section */
+    .academics {
+      background-color: #f2f5ff;
+      padding: 80px 100px;
+      text-align: center;
+    }
+
+    .academics h2 {
+      color: #004aad;
+      font-size: 2em;
+      margin-bottom: 40px;
+    }
+
+    .courses {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .course-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 25px;
+      width: 270px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .course-card h3 {
+      color: #004aad;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .course-card p {
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    /* 🖼️ Gallery Section */
+    .gallery {
+      padding: 80px 100px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .gallery h2 {
+      color: #004aad;
+      font-size: 2em;
+      margin-bottom: 40px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    /* 📞 Footer */
+    footer {
+      background-color: #002b6d;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      font-size: 0.95em;
+    }
+
+    footer a {
+      color: #ffdd57;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    /* 📱 Responsive Design */
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+
+      .hero {
+        flex-direction: column;
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      .hero img {
+        width: 85%;
+        margin-top: 30px;
+      }
+
+      .about, .academics, .gallery {
+        padding: 50px 20px;
+      }
+
+      .courses {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🧭 Navbar -->
+  <header>
+    <div class="logo">Bright Horizon Public School</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#academics">Academics</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 🌤️ Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>Welcome to Bright Horizon Public School</h1>
+      <p>
+        Empowering young minds with knowledge, creativity, and compassion.  
+        Join us in shaping the leaders of tomorrow through quality education and innovation.
+      </p>
+      <button>Learn More</button>
+    </div>
+    <img src="https://cdn-icons-png.flaticon.com/512/201/201623.png" alt="School Illustration">
+  </section>
+
+  <!-- 📘 About Section -->
+  <section class="about" id="about">
+    <h2>About Our School</h2>
+    <p>
+      Established in 1998, Bright Horizon Public School is committed to providing holistic education
+      that nurtures intellectual curiosity and moral values. We aim to foster a stimulating learning
+      environment that encourages our students to grow into confident, responsible, and compassionate citizens.
+    </p>
+  </section>
+
+  <!-- 📚 Academics Section -->
+  <section class="academics" id="academics">
+    <h2>Our Academics</h2>
+    <div class="courses">
+      <div class="course-card">
+        <h3>Primary Education</h3>
+        <p>Building strong foundations through engaging and fun learning experiences for young learners.</p>
+      </div>
+      <div class="course-card">
+        <h3>Secondary Education</h3>
+        <p>Preparing students with analytical skills, creativity, and collaboration for their future careers.</p>
+      </div>
+      <div class="course-card">
+        <h3>Co-Curricular Activities</h3>
+        <p>Encouraging all-round development through arts, sports, music, and cultural programs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🖼️ Gallery Section -->
+  <section class="gallery" id="gallery">
+    <h2>School Life & Events</h2>
+    <div class="gallery-grid">
+      <img src="https://cdn.pixabay.com/photo/2016/03/09/09/31/school-1241539_1280.jpg" alt="Classroom">
+      <img src="https://cdn.pixabay.com/photo/2016/03/27/20/54/children-1283958_1280.jpg" alt="Students Event">
+      <img src="https://cdn.pixabay.com/photo/2016/03/09/09/31/school-1241533_1280.jpg" alt="Library">
+      <img src="https://cdn.pixabay.com/photo/2017/02/01/22/02/classroom-2037023_1280.jpg" alt="Sports Activity">
+    </div>
+  </section>
+
+  <!-- 📞 Footer -->
+  <footer id="contact">
+    &copy; 2025 Bright Horizon Public School | All Rights Reserved <br>
+    Contact us at <a href="mailto:info@brighthorizon.edu">info@brighthorizon.edu</a>
+  </footer>
+
+</body>
+</html>
